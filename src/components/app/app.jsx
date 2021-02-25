@@ -3,10 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import AppHeader from '../app-header';
 import MainPage from '../pages/main-page';
+import WithRestoService from '../higher-order component';
 
 import './app.scss';
 
-const App = () => (
+const App = ({ RestoService }) => (
   <Container className="page">
     <Row>
       <Col />
@@ -18,4 +19,4 @@ const App = () => (
   </Container>
 );
 
-export default App;
+export default WithRestoService()(App);
