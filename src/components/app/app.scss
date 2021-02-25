@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+$font-jost: 'Jost', sans-serif;
+
+h1 {
+  color: rgb(44, 39, 4);
+  font-size: 4em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: $font-jost;
+  font-size: 20px;
+}
+
+.page {
+  max-width: 1440px;
+  background: url(../../images/1.jpg);
+  height: 1500px;
+  background-size: cover;
+}
+
+.content {
+  height: 800px;
+}
+
+.header-bg {
+  background: url(../../images/2.png);
+  height: 600px;
+  background-size: cover;
+}
+
