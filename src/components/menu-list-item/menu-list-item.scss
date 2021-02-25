@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.menu__card {
+  width: 100%;
+  font-size: 1rem;
+  background: linear-gradient(180deg, rgba(146, 163, 168, 0.787) 0%, rgba(0, 0, 0, 0) 92%);
+  box-shadow: 3px -5px 12px -9px rgba(0,0,0,0.66);
+}
+
+.menu__card_font {
+    font-size: 1rem;
+}
+
+.menu__btn {
+  background: #ff8800;
+  border: none;
+  letter-spacing: 0.2px;
+  &:hover{
+    background-color: rgba(111, 118, 121, 0.37);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  &:visited {
+    background-color: black;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.menu__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
