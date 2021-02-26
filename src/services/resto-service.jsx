@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 export default class RestoService extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
+  _apiBase = 'http://localhost:3000';
+
+  async getResource(url) {
+    const res = await fetch(`${this._apiBase}${url}`);
+    if (!res.ok) {
+      throw new Error(`Could not fetch ${url} , received ${res.status}`);
+    }
+    const result = await res.json();
+    return result;
   }
 
-  getMenuItems = () => (
-    []
-  )
-
-  render() {
-    return (
-      <div className="">
-        1
-      </div>
-    );
+  async getMenuItems() {
+    const res = await this.getResource('/menu/');
+    return res;
   }
 }

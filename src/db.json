@@ -1,0 +1,60 @@
+{
+	"menu": [
+		{
+			"title": "Vegetable salad",
+			"price": 12,
+			"url": "https://images.unsplash.com/photo-1513442542250-854d436a73f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=858&q=80",
+			"category": "breakfast",
+			"id": 1
+		},
+		{
+			"title": "Oatmeal with milk and fruits",
+			"price": 10,
+			"url": "https://images.unsplash.com/photo-1556191041-c2401936d851?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=662&q=80",
+			"category": "breakfast",
+			"id": 2
+		},
+		{
+			"title": "Sliced tomatoes with ground pork",
+			"price": 13,
+			"url": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+			"category": "dinner",
+			"id": 3
+		},
+		{
+			"title": "Bowl of fried rice",
+			"price": 8,
+			"url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80",
+			"category": "dinner",
+			"id": 4
+		},
+		{
+			"title": "Strawberry and banana pancakes",
+			"price": 25,
+			"url": "https://images.unsplash.com/photo-1587314168485-3236d6710814?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzc2VydHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+			"category": "dessert",
+			"id": 5
+		},
+		{
+			"title": "Ice cream with strawberry and caramel",
+			"price": 25,
+			"url": "https://images.unsplash.com/photo-1543255006-d6395b6f1171?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+			"category": "dessert",
+			"id": 6
+		},
+		{
+			"title": "Bread with cheese and vegetable",
+			"price": 25,
+			"url": "https://images.unsplash.com/photo-1595436252086-7496fb8c41e9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+			"category": "breakfast",
+			"id": 7
+		},
+		{
+			"title": "Grilled meat",
+			"price": 25,
+			"url": "https://images.unsplash.com/photo-1576511053046-7e445c5b95af?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+			"category": "dinner",
+			"id": 8
+		}
+	]
+}
