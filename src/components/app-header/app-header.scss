@@ -1,4 +1,13 @@
-.navbar-light .navbar-brand {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+a {
   color: #181310;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+    &:hover {
+      color: #181310ad;
+      text-decoration: none;
+    }
 }
 

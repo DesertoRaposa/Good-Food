@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './app-header.scss';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -8,13 +9,15 @@ const AppHeader = ({ total = 5 }) => (
     <Navbar className="d-flex justify-content-between px-4">
       <Navbar.Brand href="#home font">GoodFood</Navbar.Brand>
       <Nav>
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#pricing">
+        <Link to="/home/" className="mr-4">
+          Home
+        </Link>
+        <Link to="/cart/" className="">
           <FaShoppingCart className="mr-1" />
           Total: &nbsp;
           {total}
           $
-        </Nav.Link>
+        </Link>
       </Nav>
     </Navbar>
     <div className="header-wrapper w-50 mx-4 p-5">

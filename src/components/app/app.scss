@@ -2,13 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-$font-montserrat: 'Montserrat', sans-serif;;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-color:  rgb(44, 39, 4);
+$font-raleway: 'Raleway', sans-serif;
 
 h1 {
-  color: rgb(44, 39, 4);
+  color: $font-color;
   font-size: 4vw;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-raleway;
   font-weight: bold;
+}
+
+h2 {
+  color: $font-color;
+  font-family: $font-raleway;
 }
 
 p {
@@ -31,6 +38,7 @@ p {
   background: url(../../images/2.png);
   height: 600px;
   background-size: cover;
+  font-size: 1rem;
 }
 
 .bgh {
@@ -41,6 +49,3 @@ p {
   left: 0; right: 0; top: 0; bottom: 0;
 }
 
-.header-bg {
-  font-size: 1rem;
-}

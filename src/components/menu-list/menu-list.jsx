@@ -4,6 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import MenuListItem from '../menu-list-item';
 import './menu-list.scss';
 import WithRestoService from '../higher-order component';
+import Spinner from '../spinner';
 
 class MenuList extends Component {
   componentDidMount() {
@@ -14,7 +15,12 @@ class MenuList extends Component {
   }
 
   render() {
-    const { menuItems } = this.props;
+    const { menuItems, loading } = this.props;
+
+    if (loading) {
+      return <Spinner />;
+    }
+
     return (
       <Container fluid className="bg-light p-4">
         <Row className="mx-auto">
@@ -26,7 +32,8 @@ class MenuList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  menuItems: state.menu
+  menuItems: state.menu,
+  loading: state.loading
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -39,19 +46,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(MenuList));
-
-//   const firstArr = [[]];
-
-//   menuItems.forEach((item, i) => {
-//     firstArr[firstArr.length - 1].push(item)
-//     if ((i + 1) % 4 === 0 && i != (menuItems.length - 1)) {
-//       firstArr.push([])
-//     }
-// });
-//   console.log(firstArr);
-
-//   firstArr.forEach((row_data) => {
-//     row_data.forEach((col_data) => {
-//       console.log(col_data)
-//     })
-//   });

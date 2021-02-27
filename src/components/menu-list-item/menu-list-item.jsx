@@ -23,11 +23,11 @@ const MenuListItem = ({ menuItem }) => {
             <Card.Title className="menu__title mb-1">
               { title }
             </Card.Title>
-            <Card.Text className="p-0 m-0 menu__card_font">
+            <Card.Text className="p-0 m-0 menu__font">
               Category:
               <Badge variant="dark p-1 ml-2 font-weight-normal">{ category }</Badge>
             </Card.Text>
-            <Card.Text className="p-0 m-0 menu__card_font mb-2">
+            <Card.Text className="p-0 m-0 menu__font mb-2">
               {price}
               $
             </Card.Text>
