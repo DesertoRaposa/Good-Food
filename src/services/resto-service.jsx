@@ -1,6 +1,4 @@
-import { Component } from 'react';
-
-export default class RestoService extends Component {
+export default class RestoService {
   _apiBase = 'http://localhost:3000';
 
   async getResource(url) {

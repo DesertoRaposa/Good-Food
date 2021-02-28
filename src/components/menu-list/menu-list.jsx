@@ -1,35 +1,43 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row } from 'react-bootstrap';
+
 import MenuListItem from '../menu-list-item';
-import './menu-list.scss';
 import WithRestoService from '../higher-order component';
 import Spinner from '../spinner';
 
-class MenuList extends Component {
-  componentDidMount() {
-    const { menuLoaded } = this.props;
-    const { RestoService } = this.props;
-    RestoService.getMenuItems()
-      .then((res) => menuLoaded(res));
-  }
+import { menuRequested, createAddedToCartObject } from '../../actions';
 
-  render() {
-    const { menuItems, loading } = this.props;
+import './menu-list.scss';
 
-    if (loading) {
-      return <Spinner />;
-    }
+const MenuList = (props) => {
+  useEffect(() => {
+    menuRequested();
+    const { menuLoaded } = props;
+    const { RestoService } = props;
+    RestoService.getMenuItems().then((res) => menuLoaded(res));
+  }, []);
 
-    return (
+  const { menuItems, loading, addedToCart } = props;
+  return (
+    <>
+      {loading ? <Spinner /> : null}
       <Container fluid className="bg-light p-4">
         <Row className="mx-auto">
-          { menuItems.map((menuItem) => <MenuListItem key={menuItem.id} menuItem={menuItem} />) }
+          {
+            menuItems.map((menuItem) => (
+              <MenuListItem
+                key={menuItem.id}
+                menuItem={menuItem}
+                onAddToCart={() => addedToCart(menuItem.id)}
+              />
+            ))
+          }
         </Row>
       </Container>
-    );
-  }
-}
+    </>
+  );
+};
 
 const mapStateToProps = (state) => ({
   menuItems: state.menu,
@@ -42,7 +50,9 @@ const mapDispatchToProps = (dispatch) => ({
       type: 'MENU_LOADED',
       payload: newMenu
     });
-  }
+  },
+  menuRequested,
+  addedToCart: (id) => dispatch(createAddedToCartObject(id))
 });
 
 export default WithRestoService()(connect(mapStateToProps, mapDispatchToProps)(MenuList));

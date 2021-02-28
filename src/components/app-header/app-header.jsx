@@ -9,8 +9,8 @@ const AppHeader = ({ total = 5 }) => (
     <Navbar className="d-flex justify-content-between px-4">
       <Navbar.Brand href="#home font">GoodFood</Navbar.Brand>
       <Nav>
-        <Link to="/home/" className="mr-4">
-          Home
+        <Link to="/menu/" className="mr-4">
+          Menu
         </Link>
         <Link to="/cart/" className="">
           <FaShoppingCart className="mr-1" />

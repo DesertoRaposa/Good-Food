@@ -16,7 +16,7 @@ const App = () => (
         <Col md="10" className="content my-5 p-0">
           <AppHeader />
           <Route path="/cart" component={Cart} />
-          <Route path="/home" component={MainPage} />
+          <Route path="/menu" component={MainPage} />
         </Col>
       </Row>
     </Container>

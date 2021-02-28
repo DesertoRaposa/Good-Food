@@ -7,7 +7,7 @@ import {
   Col
 } from 'react-bootstrap';
 
-const MenuListItem = ({ menuItem }) => {
+const MenuListItem = ({ menuItem, onAddToCart }) => {
   const {
     title,
     price,
@@ -31,7 +31,7 @@ const MenuListItem = ({ menuItem }) => {
               {price}
               $
             </Card.Text>
-            <Button variant="" className="menu__btn">Add to cart</Button>
+            <Button onClick={() => onAddToCart()} variant="" className="menu__btn">Add to cart</Button>
           </Card.Body>
         </Card>
       </Col>
