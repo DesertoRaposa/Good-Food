@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import './app-header.scss';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 
-const AppHeader = ({ total = 5 }) => (
+const AppHeader = ({ totalPrice }) => (
   <div className="header-bg">
     <Navbar className="d-flex justify-content-between px-4">
       <Navbar.Brand href="#home font">GoodFood</Navbar.Brand>
@@ -15,7 +17,7 @@ const AppHeader = ({ total = 5 }) => (
         <Link to="/cart/" className="">
           <FaShoppingCart className="mr-1" />
           Total: &nbsp;
-          {total}
+          {totalPrice}
           $
         </Link>
       </Nav>
@@ -40,4 +42,8 @@ const AppHeader = ({ total = 5 }) => (
   </div>
 );
 
-export default AppHeader;
+const mapStateToProps = ({ totalPrice }) => ({
+  totalPrice
+});
+
+export default connect(mapStateToProps)(AppHeader);

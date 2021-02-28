@@ -23,27 +23,32 @@ const Cart = ({ items, deleteFromCart }) => (
     </Row>
     <Row className="mx-auto w-75 d-flex flex-column">
       {
-      items.map((item, i) => {
-        const {
-          title,
-          price,
-          url,
-          id
-        } = item;
+      items.map((item) => {
+        const { title, price, url, id, quantity } = item;
+        const totalPrice = price * quantity;
         return (
-          <Col key={id + ' ' + i} className="cart__card my-4 d-flex flex-column flex-md-row align-items-center p-0 m-0">
+          <Col key={id} className="cart__card my-4 d-flex flex-column flex-md-row align-items-top p-0 m-0">
             <Col md={4} className="p-0 m-0">
               <Image className="cart-img" src={url} alt={title} />
             </Col>
-            <Col md={6} className="cart__title">
+            <Col md={5} className="cart__title p-4">
               {title}
               <p className="description mt-2">
                 A pancake is a flat cake, often thin and round, prepared from a starch-based
               </p>
             </Col>
-            <Col md={2} className="text-center p-2">
-              {price}
-              $
+            <Col md={3} className="text-center pt-4 d-flex flex-row justify-content-around">
+              <div className="mr-3 cart__price">
+                Quantity
+                <span className="d-block cart__quantity">{quantity}</span>
+              </div>
+              <div className="cart__price">
+                Price
+                <span className="d-block cart__quantity">
+                  {totalPrice}
+                  $
+                </span>
+              </div>
             </Col>
             <div onClick={() => deleteFromCart((id))} className="cart__close">
               <GrClose />

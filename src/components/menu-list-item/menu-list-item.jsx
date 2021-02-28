@@ -8,12 +8,7 @@ import {
 } from 'react-bootstrap';
 
 const MenuListItem = ({ menuItem, onAddToCart }) => {
-  const {
-    title,
-    price,
-    url,
-    category
-  } = menuItem;
+  const { title, price, url, category } = menuItem;
   return (
     <>
       <Col xs={6} lg={3}>
